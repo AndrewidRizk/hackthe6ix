@@ -22,8 +22,14 @@ This repository contains the project developed for HackThe6ix hackathon. The pro
 
 ### Prerequisites
 
-- [Prerequisite 1]
-- [Prerequisite 2]
+- Python 3.8 or higher
+- Git
+- API keys for:
+  - Gemini AI
+  - Vellum AI
+  - 12 Labs
+  - 11 Labs
+  - Ribbon AI
 
 ### Installation
 
@@ -33,14 +39,36 @@ git clone https://github.com/AndrewidRizk/hackthe6ith.git
 cd hackthe6ith
 ```
 
-2. Install dependencies
+2. Set up the Backend
 ```bash
-# Add installation commands here
+# Navigate to backend directory
+cd backend
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Create .env file with your API keys
+# Copy the example and add your keys:
+# VELLUM_API_KEY=your_vellum_key_here
+# GEMINI_API_KEY=your_gemini_key_here
+# TWELVE_LABS_API_KEY=your_twelve_labs_key_here
+# ELEVEN_LABS_API_KEY=your_eleven_labs_key_here
+# RIBBON_API_KEY=your_ribbon_key_here
 ```
 
 3. Run the project
 ```bash
-# Add run commands here
+# Backend (from backend directory with venv activated)
+python main.py
 ```
 
 ## 📁 Project Structure
